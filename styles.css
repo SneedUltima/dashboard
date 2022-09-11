@@ -9,6 +9,7 @@
 /* ******** OVERALL LAYOUT ******** */
 body{
     font-family: 'Roboto', sans-serif;
+    background-color: #94a3b8;
 }
 
 .body-container{
@@ -19,7 +20,7 @@ body{
 }
 
 .sidebar-container{
-    background-color: red;
+    background-color: rgb(27,27,27);
 }
 
 .content-container{
@@ -29,7 +30,6 @@ body{
 
 .header{
     height: 20vh;
-    background-color: blue;
 }
 
 /* ******** SIDEBAR ******** */
@@ -89,8 +89,8 @@ body{
 /* ******** HEADER LAYOUT ******** */
 
 .header{
-    background-color: rgb(35,35,35);
-    color: white;
+    background-color: white;
+    color: black;
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     grid-template-rows: 1fr 1.5fr;
@@ -171,7 +171,6 @@ body{
 
 .header-buttons button{
   background-color: #13aa52;
-  border: 1px solid #13aa52;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, .4) 0 2px 4px 0;
   color: #fff;
@@ -182,8 +181,133 @@ body{
   padding: 5px 15px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 }
 
 .header-buttons button:hover{
     background-color: #119849;
+}
+
+/* ******** MAIN LAYOUT ******** */
+
+.main-content{
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: #94a3b8;
+}
+
+#project-header{
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.projects{
+    display: grid;
+    width: 45vw;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-size: 12px;
+    padding: 10px 0 0 20px;
+    gap: 15px;
+}
+
+.project{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    padding: 15px 10px;
+    border-radius: 4%;
+    border-left: 5px solid black;
+    display: grid;
+    grid-template-rows: 2fr 0.5fr;
+}
+
+.project:hover{
+    border-left: 5px solid #119849;
+}
+
+#project-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.project-icon-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+#star, #eye, #garbage{
+    cursor: pointer;
+}
+
+.anouncements-container{
+    display: grid;
+    height: 60vh;
+    grid-template-rows: 1fr 1fr;
+    padding-right: 30px;
+}
+
+#announcements-title, #announcement-title{
+    font-weight: bold;
+}
+
+.announcements-grid{
+    font-size: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-rows: repeat(1fr);
+    gap: 7px;
+    padding: 10px 10px;
+    margin: 0 0 15px 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 2%;
+}
+
+.announcement {
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(180, 179, 179,0.4);
+}
+
+.announcement:last-child {
+    border-bottom: none;
+}
+
+#announcements-title{
+    margin-bottom: 5px;
+}
+
+.trending-grid{
+    display: grid;
+    grid-template-rows: repeat(1fr);
+    gap: 5px;
+    background-color: white;
+    padding: 10px 10px;
+    border-radius: 2%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.trend{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.trend-logo img{
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+}
+
+.trend-text{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+.tag{
+    font-weight: bold;
 }
